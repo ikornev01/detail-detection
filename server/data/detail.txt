@@ -1,0 +1,3 @@
+color: white
+inner part: false
+precision: 0.8
