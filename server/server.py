@@ -1,6 +1,5 @@
 import socket
-import sys
-import os
+import subprocess
 import setup
 
 
@@ -29,13 +28,15 @@ def get_response(request_data):
     HDRS_404 = 'HTTP/1.1 404 OK\r\nContent-Type: text/html; charset=utf-8\r\n\r\n'
 
     path = request_data.split(' ')[1]
-    if path == '/':
+    if path == ' ':
+        setup.data_list = []
         return (HDRS_404 + 'Page not found.').encode('utf-8')
     try:
         with open('data' + path + '.txt', 'rb') as file:
             setup.data_list = file.read().splitlines()
         return HDRS.encode('utf-8')
     except FileNotFoundError:
+        setup.data_list = []
         return (HDRS_404 + 'Page not found.').encode('utf-8')
 
 
