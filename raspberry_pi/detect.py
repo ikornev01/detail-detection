@@ -9,7 +9,7 @@ from tflite_support.task import core
 from tflite_support.task import processor
 from tflite_support.task import vision
 import utils
-import settings #global variables
+import settings  # global variables
 
 
 def run(model: str, camera_id: int, width: int, height: int, num_threads: int,
@@ -24,10 +24,6 @@ def run(model: str, camera_id: int, width: int, height: int, num_threads: int,
     num_threads: The number of CPU threads to run the model.
     enable_edgetpu: True/False whether the model is a EdgeTPU model.
   """
-
-#   # Variables to calculate FPS
-#   counter, fps = 0, 0
-  start_time = time.time_ns()
 
   # Start capturing video input from the camera
   cap = cv2.VideoCapture(camera_id)
