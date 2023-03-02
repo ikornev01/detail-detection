@@ -29,6 +29,9 @@ def run(model: str, camera_id: int, width: int, height: int, num_threads: int,
   cap = cv2.VideoCapture(camera_id)
   cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
   cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
+  
+  # Detection start time
+  start_time = time.time()
 
   # Initialize the object detection model
   base_options = core.BaseOptions(
@@ -40,6 +43,7 @@ def run(model: str, camera_id: int, width: int, height: int, num_threads: int,
   detector = vision.ObjectDetector.create_from_options(options)
 
   # Continuously capture images from the camera and run inference
+  
   while cap.isOpened():
     success, image = cap.read()
     if not success:
@@ -65,9 +69,11 @@ def run(model: str, camera_id: int, width: int, height: int, num_threads: int,
       break
     cv2.imshow('Detail detector', image)
     
-    # Close app 5 sec later.
-    if cv2.waitKey(5000):
+    # Close program ...(7) sec later using start_time
+    time_elapsed = time.time() - start_time
+    if time_elapsed > 7:
       break
+  
   cap.release()
   cv2.destroyAllWindows()
 
