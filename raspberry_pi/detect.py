@@ -61,9 +61,6 @@ def run(model: str, camera_id: int, width: int, height: int, num_threads: int,
     image = utils.visualize(image, detection_result)
 
     # Stop the program if the ESC key is pressed.
-    
-    #if settings.name != 0:
-      #break
     if cv2.waitKey(1) == 27:
       break
     cv2.imshow('Detail detector', image)
