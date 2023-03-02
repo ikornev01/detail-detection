@@ -69,8 +69,8 @@ def run(model: str, camera_id: int, width: int, height: int, num_threads: int,
     cv2.imshow('Detail detector', image)
     
     # Close app 5 sec later.
-#     if cv2.waitKey(5000):
-#       break
+    if cv2.waitKey(5000):
+      break
   cap.release()
   cv2.destroyAllWindows()
 
