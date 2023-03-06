@@ -6,7 +6,7 @@ import setup  # global variables to save data after object detection
 def start_server():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # to reuse the same port
-    server.bind(('192.168.1.207', 5000))
+    server.bind(('192.168.1.181', 5000))
     server.listen(3)
     print('Server started...')
     try:
