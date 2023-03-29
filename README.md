@@ -9,18 +9,26 @@ The project "detail-detection" cosnists of two parts:
 
 Running the detail detection:
 
-The instruction for the installation of TensorFlow Lite is in the folder "raspberry_pi"
+The instruction for the installation of TensorFlow Lite is in folder "raspberry_pi"
 I also recommend to use "requirements.txt" to avoid the versions' conflict.
 
 
 Usage of this (my) setting-up:
 
-To start server: python detail-detection/server/server.py
-To start detection separately: source tflite/bin/activate
+To start server: 
+```
+python detail-detection/server/server.py
+```
+To start detection separately: 
+```
+source tflite/bin/activate
 cd detail-detection/raspberry_pi/
-
+```
 
 To teach your own model: 
-https://colab.research.google.com/github/khanhlvg/tflite_raspberry_pi/blob/main/object_detection/Train_custom_model_tutorial.ipynb
-https://www.youtube.com/watch?v=-ZyFYniGUsw&t=67s
-https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/raspberry_pi
+
+[Google Colab](https://colab.research.google.com/github/khanhlvg/tflite_raspberry_pi/blob/main/object_detection/Train_custom_model_tutorial.ipynb)
+
+[TensorFlow Raspberry Pi](https://www.youtube.com/watch?v=-ZyFYniGUsw&t=67s)
+
+[TensorFlow Lite object detection project](https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/raspberry_pi)
