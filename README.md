@@ -3,7 +3,7 @@ Practice RUB Jan-Apr 23
 
 
 The project "detail-detection" cosnists of two parts:
-1.  ThensorFlow Lite model, which detects the detail with Pi Camera
+1.  TensorFlow Lite model, which detects the detail with Pi Camera
 2.  Python webserver, which gets a request to detect a detail and then shows the data of this detail
 
 
