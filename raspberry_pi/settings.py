@@ -1,6 +1,6 @@
 # initializing global variables
 def init():
-    global name # name of model
+    global name # name of current detail
     name = ''
     global precision
     precision = 0

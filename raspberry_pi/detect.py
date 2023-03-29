@@ -69,7 +69,7 @@ def run(model: str, camera_id: int, width: int, height: int, num_threads: int,
       break
     cv2.imshow('Detail detector', image)
     
-    # Close program ...(7) sec later using start_time
+    # Stop the program ...(7) sec later, using start_time
     time_elapsed = time.time() - start_time
     if time_elapsed > 7:
       break
