@@ -1,5 +1,5 @@
 # detail-detection 
-Practice RUB Jan-Apr 23
+RUB Jan-Apr 23
 
 
 The project "detail-detection" cosnists of two parts:
