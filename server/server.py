@@ -45,7 +45,7 @@ def get_response(request_data):  # to form the answer
     HDRS = 'HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=utf-8\r\n\r\n'
     HDRS_404 = 'HTTP/1.1 404 OK\r\nContent-Type: text/html; charset=utf-8\r\n\r\n'
 
-    path = request_data.split(' ')[1]  # parthes user's request
+    path = request_data.split(' ')[1]  # parses user's request
     if path == '/':
         return (HDRS_404 + 'Page not found.').encode('utf-8')
     if path == '/detail':
